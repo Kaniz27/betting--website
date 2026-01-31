@@ -139,7 +139,13 @@ const App: React.FC = () => {
             <img
               src={SLIDES[currentSlide].image}
               alt={`Slide ${currentSlide + 1}`}
-              className="w-full h-full object-contain"
+              className="
+    w-full 
+    h-48 sm:h-64 md:h-80 lg:h-[600px] 
+    object-cover 
+    sm:object-contain
+    rounded-lg
+  "
             />
 
             {/* Gradient Overlay – Top + Bottom */}
@@ -153,7 +159,7 @@ const App: React.FC = () => {
 
             {/* Buttons – side by side */}
             <div
-  className="
+              className="
     absolute
     bottom-20 sm:bottom-24
     left-1/2 -translate-x-1/2
@@ -164,11 +170,11 @@ const App: React.FC = () => {
     px-4
     w-full sm:w-auto
   "
->
-  {/* Go To Website */}
-  <SpringButton
-    variant="attention"
-    className="
+            >
+              {/* Go To Website */}
+              <SpringButton
+                variant="attention"
+                className="
       w-full sm:w-auto
       flex items-center justify-center gap-2
       text-sm sm:text-lg
@@ -178,17 +184,17 @@ const App: React.FC = () => {
       rounded-full
       transition-all
     "
-    onClick={() =>
-      window.open("https://www.nagad88f.com/", "_blank")
-    }
-  >
-    Go To My Website <ExternalLink size={16} />
-  </SpringButton>
+                onClick={() =>
+                  window.open("https://www.nagad88f.com/", "_blank")
+                }
+              >
+                Go To My Website <ExternalLink size={16} />
+              </SpringButton>
 
-  {/* WhatsApp */}
-  <SpringButton
-    variant="whatsapp"
-    className="
+              {/* WhatsApp */}
+              <SpringButton
+                variant="whatsapp"
+                className="
       w-full sm:w-auto
       flex items-center justify-center gap-2
       text-sm sm:text-lg
@@ -200,18 +206,17 @@ const App: React.FC = () => {
       shadow-md hover:shadow-xl
       transition-all duration-300
     "
-    onClick={() =>
-      window.open(
-        "https://wa.me/8801936056185?text=Hello%20I%20need%20support",
-        "_blank"
-      )
-    }
-  >
-    <WhatsApp size={16} />
-    হোয়াটসঅ্যাপ সাপোর্ট
-  </SpringButton>
-</div>
-
+                onClick={() =>
+                  window.open(
+                    "https://wa.me/8801936056185?text=Hello%20I%20need%20support",
+                    "_blank",
+                  )
+                }
+              >
+                <WhatsApp size={16} />
+                হোয়াটসঅ্যাপ সাপোর্ট
+              </SpringButton>
+            </div>
           </motion.div>
         </AnimatePresence>
 
@@ -245,7 +250,7 @@ const App: React.FC = () => {
       {/*  */}
       <section className="py-12 px-4 bg-[#0a192f]">
         {/* Top Text */}
-        <h2 className="text-white text-3xl md:text-2xl font-bold text-start mb-6">
+        <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold text-start mb-6">
           রেফারেল প্রোগ্রাম
         </h2>
 
@@ -254,19 +259,19 @@ const App: React.FC = () => {
           <img
             src="https://www.nagad88f.com/static/image/referral/bd/Desktop_Before_Login.jpg"
             alt="Referral Program"
-            className="w-full h-64 md:h-80 object-cover rounded-lg"
+            className="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover rounded-lg"
           />
         </div>
 
         {/* Date */}
-        <p className="text-white bg-blue-600 inline-block px-4 py-1 rounded mb-6">
+        <p className="text-white bg-blue-600 inline-block px-4 py-1 rounded mb-6 text-sm sm:text-base">
           30/01/2026 তারিখের কিছু রেফারেল কমিশন
         </p>
 
         {/* Referral List Animation Container */}
         <div className="relative w-full overflow-hidden">
-          <div className="flex gap-6 animate-scroll">
-            {/* Repeat 10 items (loop) */}
+          <div className="flex gap-4 sm:gap-6 animate-scroll">
+            {/* Repeat items */}
             {[
               { name: "****jhossain", amount: "3870.93" },
               { name: "****01", amount: "3716.80" },
@@ -281,15 +286,19 @@ const App: React.FC = () => {
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="flex flex-col items-center bg-[#112240] p-4 rounded-lg min-w-[160px]"
+                className="flex flex-col items-center bg-[#112240] p-3 sm:p-4 rounded-lg min-w-[140px] sm:min-w-[160px]"
               >
                 <img
                   src="https://www.nagad88f.com/static/image/referral/Icons.png"
                   alt={item.name}
-                  className="w-18 h-16 rounded-full mb-2"
+                  className="w-12 h-12 sm:w-16 sm:h-16 rounded-full mb-2"
                 />
-                <p className="text-white font-bold">{item.name}</p>
-                <p className="text-blue-400 font-semibold">{item.amount}</p>
+                <p className="text-white font-bold text-sm sm:text-base">
+                  {item.name}
+                </p>
+                <p className="text-blue-400 font-semibold text-sm sm:text-base">
+                  {item.amount}
+                </p>
               </div>
             ))}
           </div>
@@ -305,8 +314,15 @@ const App: React.FC = () => {
 
       .animate-scroll {
         display: flex;
-        gap: 1.5rem;
+        gap: 1rem;
         animation: scroll 20s linear infinite;
+      }
+
+      /* Responsive tweak for small devices */
+      @media (max-width: 640px) {
+        .animate-scroll {
+          gap: 0.75rem;
+        }
       }
     `}
         </style>
@@ -584,12 +600,12 @@ const App: React.FC = () => {
                 আমরা প্রদান করি ১০০% নিরাপদ এবং নির্ভরযোগ্য সেবা।
               </p>
               <div className="flex gap-4">
-  {/* Facebook */}
-  <a
-    href="https://www.facebook.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="
+                {/* Facebook */}
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
       w-10 h-10 rounded-full
       flex items-center justify-center
       bg-white/5 text-white
@@ -598,16 +614,16 @@ const App: React.FC = () => {
       hover:shadow-lg
       transition-all duration-300
     "
-  >
-    <FaFacebookF size={16} />
-  </a>
+                >
+                  <FaFacebookF size={16} />
+                </a>
 
-  {/* Twitter */}
-  <a
-    href="https://twitter.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="
+                {/* Twitter */}
+                <a
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
       w-10 h-10 rounded-full
       flex items-center justify-center
       bg-white/5 text-white
@@ -616,16 +632,16 @@ const App: React.FC = () => {
       hover:shadow-lg
       transition-all duration-300
     "
-  >
-    <FaTwitter size={18} />
-  </a>
+                >
+                  <FaTwitter size={18} />
+                </a>
 
-  {/* Instagram */}
-  <a
-    href="https://www.instagram.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="
+                {/* Instagram */}
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
       w-10 h-10 rounded-full
       flex items-center justify-center
       bg-white/5 text-white
@@ -634,16 +650,16 @@ const App: React.FC = () => {
       hover:shadow-lg
       transition-all duration-300
     "
-  >
-    <FaInstagram size={18} />
-  </a>
+                >
+                  <FaInstagram size={18} />
+                </a>
 
-  {/* YouTube */}
-  <a
-    href="https://www.youtube.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="
+                {/* YouTube */}
+                <a
+                  href="https://www.youtube.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
       w-10 h-10 rounded-full
       flex items-center justify-center
       bg-white/5 text-white
@@ -652,11 +668,10 @@ const App: React.FC = () => {
       hover:shadow-lg
       transition-all duration-300
     "
-  >
-    <FaYoutube size={18} />
-  </a>
-</div>
-
+                >
+                  <FaYoutube size={18} />
+                </a>
+              </div>
             </div>
 
             {/* Quick Links */}
