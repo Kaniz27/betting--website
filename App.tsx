@@ -296,7 +296,7 @@ const App: React.FC = () => {
         <div className="container mx-auto px-4 relative z-10">
           {/* Heading */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-2xl font-extrabold mb-4 tracking-wide text-transparent bg-clip-text text-black">
+            <h2 className="text-3xl md:text-2xl font-extrabold mb-4 tracking-wide text-transparent bg-clip-text  text-blue-600">
               কেন Nagad88 বেছে নেবেন?
             </h2>
             <div className="h-1.5 w-28 bg-yellow-400 mx-auto rounded-full shadow-lg" />
