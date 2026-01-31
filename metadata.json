@@ -1,0 +1,9 @@
+
+{
+  "name": "Nagad88 Landing Page",
+  "description": "A high-performance, mobile-friendly landing page for Nagad88 featuring a yellow and blue theme, spring animations, and a Gemini-powered support assistant.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
