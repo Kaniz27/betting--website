@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+
 import {
   Menu,
   X,
@@ -114,7 +116,6 @@ const App: React.FC = () => {
                   <X size={32} />
                 </button>
               </div>
-             
             </motion.div>
           )}
         </AnimatePresence>
@@ -151,42 +152,66 @@ const App: React.FC = () => {
             />
 
             {/* Buttons – side by side */}
-            <div className="absolute bottom-28 left-1/2 -translate-x-1/2 flex flex-row items-center gap-6">
-              {/* Go To Website */}
-              <SpringButton
-                variant="attention"
-                className="flex items-center gap-2 text-lg px-6 py-1 bg-[rgb(255,149,26)] hover:bg-[rgb(255,149,26)/90]"
-                onClick={() =>
-                  window.open("https://www.nagad88f.com/", "_blank")
-                }
-              >
-                Go To My Website <ExternalLink size={18} />
-              </SpringButton>
-
-              {/* WhatsApp */}
-              <SpringButton
-  variant="whatsapp"
+            <div
   className="
-    flex items-center gap-3 text-lg px-6 py-2
-    bg-gradient-to-b from-[#2a4cff] to-[#1230c1]
-    hover:from-[#3b5bff] hover:to-[#1230c1]
-    text-white
-    rounded-full
-    shadow-lg hover:shadow-2xl
-    transition-all duration-300
+    absolute
+    bottom-20 sm:bottom-24
+    left-1/2 -translate-x-1/2
+    flex
+    flex-col sm:flex-row
+    items-center
+    gap-3 sm:gap-6
+    px-4
+    w-full sm:w-auto
   "
-  onClick={() =>
-    window.open(
-      'https://wa.me/8801936056185?text=Hello%20I%20need%20support',
-      '_blank'
-    )
-  }
 >
-  <WhatsApp size={18} className="text-white" />
-  হোয়াটসঅ্যাপ সাপোর্ট
-</SpringButton>
+  {/* Go To Website */}
+  <SpringButton
+    variant="attention"
+    className="
+      w-full sm:w-auto
+      flex items-center justify-center gap-2
+      text-sm sm:text-lg
+      px-5 py-2
+      bg-[rgb(255,149,26)]
+      hover:bg-[rgb(255,149,26)/90]
+      rounded-full
+      transition-all
+    "
+    onClick={() =>
+      window.open("https://www.nagad88f.com/", "_blank")
+    }
+  >
+    Go To My Website <ExternalLink size={16} />
+  </SpringButton>
 
-            </div>
+  {/* WhatsApp */}
+  <SpringButton
+    variant="whatsapp"
+    className="
+      w-full sm:w-auto
+      flex items-center justify-center gap-2
+      text-sm sm:text-lg
+      px-5 py-2
+      bg-gradient-to-b from-[#2a4cff] to-[#1230c1]
+      hover:from-[#3b5bff] hover:to-[#1230c1]
+      text-white
+      rounded-full
+      shadow-md hover:shadow-xl
+      transition-all duration-300
+    "
+    onClick={() =>
+      window.open(
+        "https://wa.me/8801936056185?text=Hello%20I%20need%20support",
+        "_blank"
+      )
+    }
+  >
+    <WhatsApp size={16} />
+    হোয়াটসঅ্যাপ সাপোর্ট
+  </SpringButton>
+</div>
+
           </motion.div>
         </AnimatePresence>
 
@@ -296,9 +321,17 @@ const App: React.FC = () => {
         <div className="container mx-auto px-4 relative z-10">
           {/* Heading */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-2xl font-extrabold mb-4 tracking-wide text-transparent bg-clip-text  text-blue-600">
+            <h2
+              className="
+  text-3xl md:text-2xl
+  font-extrabold mb-4 tracking-wide
+  text-transparent bg-clip-text
+  bg-gradient-to-b from-blue-400 to-blue-700
+"
+            >
               কেন Nagad88 বেছে নেবেন?
             </h2>
+
             <div className="h-1.5 w-28 bg-yellow-400 mx-auto rounded-full shadow-lg" />
           </div>
 
@@ -380,7 +413,15 @@ const App: React.FC = () => {
 
         <div className="container mx-auto px-4 relative z-10">
           {/* Heading */}
-          <h2 className="text-4xl md:text-2xl font-extrabold text-center text-transparent bg-clip-text text-white mb-20">
+          <h2
+            className="
+  text-4xl md:text-2xl
+  font-extrabold text-center
+  text-transparent bg-clip-text
+  bg-gradient-to-b from-blue-400 to-blue-700
+  mb-20
+"
+          >
             কিভাবে খেলা শুরু করবেন?
           </h2>
 
@@ -416,9 +457,9 @@ const App: React.FC = () => {
 
       {/* 6. FINAL CTA SECTION */}
       <section className="relative py-12 md:py-16 bg-black">
-  <div className="container mx-auto px-4">
-    <div
-      className="
+        <div className="container mx-auto px-4">
+          <div
+            className="
         grid
         grid-cols-2
         sm:grid-cols-3
@@ -427,103 +468,102 @@ const App: React.FC = () => {
         items-center
         text-center
       "
-    >
-      {/* Item 1 */}
-      <div className="flex flex-col items-center">
-        <p className="text-white font-bold mb-3 text-sm md:text-base">
-          মূল্য পরিশোধ পদ্ধতি
-        </p>
-        <img
-          src="https://www.nagad88f.com/static/svg/Bank_Icon.svg"
-          alt="Payment Methods"
-          className="h-7 md:h-8 w-auto"
-        />
-      </div>
-
-      {/* Item 2 */}
-      <div className="flex flex-col items-center">
-        <p className="text-white font-bold mb-3 text-sm md:text-base">
-          আমাদের অনুসরণ করুন
-        </p>
-
-        <div className="flex gap-3 md:gap-4">
-          <a
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-9 h-9 md:w-10 md:h-10 bg-white/10 text-gray-300 rounded-full flex items-center justify-center hover:bg-gray-300 hover:text-black transition-all"
           >
-            <Facebook size={18} />
-          </a>
+            {/* Item 1 */}
+            <div className="flex flex-col items-center">
+              <p className="text-white font-bold mb-3 text-sm md:text-base">
+                মূল্য পরিশোধ পদ্ধতি
+              </p>
+              <img
+                src="https://www.nagad88f.com/static/svg/Bank_Icon.svg"
+                alt="Payment Methods"
+                className="h-7 md:h-8 w-auto"
+              />
+            </div>
 
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-9 h-9 md:w-10 md:h-10 bg-white/10 text-gray-300 rounded-full flex items-center justify-center hover:bg-gray-300 hover:text-black transition-all"
-          >
-            <Instagram size={18} />
-          </a>
+            {/* Item 2 */}
+            <div className="flex flex-col items-center">
+              <p className="text-white font-bold mb-3 text-sm md:text-base">
+                আমাদের অনুসরণ করুন
+              </p>
 
-          <a
-            href="https://twitter.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-9 h-9 md:w-10 md:h-10 bg-white/10 text-gray-300 rounded-full flex items-center justify-center hover:bg-gray-300 hover:text-black transition-all"
-          >
-            <Twitter size={18} />
-          </a>
+              <div className="flex gap-3 md:gap-4">
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 md:w-10 md:h-10 bg-white/10 text-gray-300 rounded-full flex items-center justify-center hover:bg-gray-300 hover:text-black transition-all"
+                >
+                  <Facebook size={18} />
+                </a>
 
-          <a
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-9 h-9 md:w-10 md:h-10 bg-white/10 text-gray-300 rounded-full flex items-center justify-center hover:bg-gray-300 hover:text-black transition-all"
-          >
-            <Linkedin size={18} />
-          </a>
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 md:w-10 md:h-10 bg-white/10 text-gray-300 rounded-full flex items-center justify-center hover:bg-gray-300 hover:text-black transition-all"
+                >
+                  <Instagram size={18} />
+                </a>
+
+                <a
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 md:w-10 md:h-10 bg-white/10 text-gray-300 rounded-full flex items-center justify-center hover:bg-gray-300 hover:text-black transition-all"
+                >
+                  <Twitter size={18} />
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 md:w-10 md:h-10 bg-white/10 text-gray-300 rounded-full flex items-center justify-center hover:bg-gray-300 hover:text-black transition-all"
+                >
+                  <Linkedin size={18} />
+                </a>
+              </div>
+            </div>
+
+            {/* Item 3 */}
+            <div className="flex flex-col items-center">
+              <p className="text-white font-bold mb-3 text-sm md:text-base">
+                সার্টিফিকেশন
+              </p>
+              <img
+                src="https://www.nagad88f.com/static/image/footer/gaming_Casino_Analyzer.svg"
+                alt="Certification"
+                className="h-10 md:h-12 w-auto"
+              />
+            </div>
+
+            {/* Item 4 */}
+            <div className="flex flex-col items-center">
+              <p className="text-white font-bold mb-3 text-sm md:text-base">
+                কমিউনিটি ওয়েবসাইট
+              </p>
+              <img
+                src="https://www.nagad88f.com/static/image/footer/safe2.png"
+                alt="Community"
+                className="h-10 md:h-12 w-auto"
+              />
+            </div>
+
+            {/* Item 5 */}
+            <div className="flex flex-col items-center">
+              <p className="text-white font-bold mb-3 text-sm md:text-base">
+                গেমিং লাইসেন্স
+              </p>
+              <img
+                src="https://www.nagad88f.com/static/image/footer/gaming_license.webp"
+                alt="Gaming License"
+                className="h-7 md:h-8 w-auto"
+              />
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/* Item 3 */}
-      <div className="flex flex-col items-center">
-        <p className="text-white font-bold mb-3 text-sm md:text-base">
-          সার্টিফিকেশন
-        </p>
-        <img
-          src="https://www.nagad88f.com/static/image/footer/gaming_Casino_Analyzer.svg"
-          alt="Certification"
-          className="h-10 md:h-12 w-auto"
-        />
-      </div>
-
-      {/* Item 4 */}
-      <div className="flex flex-col items-center">
-        <p className="text-white font-bold mb-3 text-sm md:text-base">
-          কমিউনিটি ওয়েবসাইট
-        </p>
-        <img
-          src="https://www.nagad88f.com/static/image/footer/safe2.png"
-          alt="Community"
-          className="h-10 md:h-12 w-auto"
-        />
-      </div>
-
-      {/* Item 5 */}
-      <div className="flex flex-col items-center">
-        <p className="text-white font-bold mb-3 text-sm md:text-base">
-          গেমিং লাইসেন্স
-        </p>
-        <img
-          src="https://www.nagad88f.com/static/image/footer/gaming_license.webp"
-          alt="Gaming License"
-          className="h-7 md:h-8 w-auto"
-        />
-      </div>
-    </div>
-  </div>
-</section>
-
+      </section>
 
       {/* 7. FOOTER */}
       <footer
@@ -544,15 +584,79 @@ const App: React.FC = () => {
                 আমরা প্রদান করি ১০০% নিরাপদ এবং নির্ভরযোগ্য সেবা।
               </p>
               <div className="flex gap-4">
-                {["fb", "tw", "inst", "yt"].map((s) => (
-                  <div
-                    key={s}
-                    className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-blue-950 transition-all cursor-pointer"
-                  >
-                    <span className="uppercase font-bold text-[10px]">{s}</span>
-                  </div>
-                ))}
-              </div>
+  {/* Facebook */}
+  <a
+    href="https://www.facebook.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      w-10 h-10 rounded-full
+      flex items-center justify-center
+      bg-white/5 text-white
+      hover:bg-blue-600
+      hover:-translate-y-1
+      hover:shadow-lg
+      transition-all duration-300
+    "
+  >
+    <FaFacebookF size={16} />
+  </a>
+
+  {/* Twitter */}
+  <a
+    href="https://twitter.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      w-10 h-10 rounded-full
+      flex items-center justify-center
+      bg-white/5 text-white
+      hover:bg-sky-500
+      hover:-translate-y-1
+      hover:shadow-lg
+      transition-all duration-300
+    "
+  >
+    <FaTwitter size={18} />
+  </a>
+
+  {/* Instagram */}
+  <a
+    href="https://www.instagram.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      w-10 h-10 rounded-full
+      flex items-center justify-center
+      bg-white/5 text-white
+      hover:bg-gradient-to-tr hover:from-pink-500 hover:to-yellow-400
+      hover:-translate-y-1
+      hover:shadow-lg
+      transition-all duration-300
+    "
+  >
+    <FaInstagram size={18} />
+  </a>
+
+  {/* YouTube */}
+  <a
+    href="https://www.youtube.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      w-10 h-10 rounded-full
+      flex items-center justify-center
+      bg-white/5 text-white
+      hover:bg-red-600
+      hover:-translate-y-1
+      hover:shadow-lg
+      transition-all duration-300
+    "
+  >
+    <FaYoutube size={18} />
+  </a>
+</div>
+
             </div>
 
             {/* Quick Links */}
