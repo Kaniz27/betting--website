@@ -68,10 +68,7 @@ const App: React.FC = () => {
           {/* Desktop Right */}
           <div className="hidden md:flex items-center gap-6">
             <div className="flex flex-col text-right">
-              <div className="flex items-center gap-2 text-white text-sm">
-                <Phone size={14} className="text-white" />
-                <span>01936056185</span>
-              </div>
+             
               <div className="text-[rgb(255,177,61)] font-bold text-xs uppercase tracking-widest">
                 ২৪/৭ কাস্টমার কেয়ার
               </div>
@@ -206,12 +203,12 @@ const App: React.FC = () => {
       shadow-md hover:shadow-xl
       transition-all duration-300
     "
-                onClick={() =>
-                  window.open(
-                    "https://wa.me/8801936056185?text=Hello%20I%20need%20support",
-                    "_blank",
-                  )
-                }
+                // onClick={() =>
+                //   window.open(
+                //     "https://.me/8801936056185?text=Hello%20I%20need%20support",
+                //     "_blank",
+                //   )
+                // }
               >
                 <WhatsApp size={16} />
                 হোয়াটসঅ্যাপ সাপোর্ট
@@ -583,176 +580,109 @@ const App: React.FC = () => {
 
       {/* 7. FOOTER */}
       <footer
-        id="contact"
-        className="bg-[#0a192f] text-white pt-24 pb-12 border-t border-white/5"
-      >
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
-            {/* Logo & About */}
-            <div className="md:col-span-2 flex  flex-col items-start gap-4">
-              <img
-                src="https://www.nagad88f.com/static/svg/Vertical_Logo_White.svg"
-                alt="NAGAD88 Logo"
-                className="h-16 w-auto mb-4 items-start"
-              />
-              <p className="text-blue-200/60 max-w-md text-lg leading-relaxed mb-6">
-                বাংলাদেশের ১ নম্বর অনলাইন গেমিং এবং স্পোর্টস বেটিং প্ল্যাটফর্ম।
-                আমরা প্রদান করি ১০০% নিরাপদ এবং নির্ভরযোগ্য সেবা।
-              </p>
-              <div className="flex gap-4">
-                {/* Facebook */}
-                <a
-                  href="https://www.facebook.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="
-      w-10 h-10 rounded-full
-      flex items-center justify-center
-      bg-white/5 text-white
-      hover:bg-blue-600
-      hover:-translate-y-1
-      hover:shadow-lg
-      transition-all duration-300
-    "
-                >
-                  <FaFacebookF size={16} />
-                </a>
+  id="contact"
+  className="bg-[#0a192f] text-white pt-16 pb-10 border-t border-white/5"
+>
+  <div className="max-w-7xl mx-auto px-4">
+    {/* Main Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      
+      {/* Logo & About */}
+      <div className="md:col-span-2 items-start flex flex-col gap-4">
+        <img
+          src="https://www.nagad88f.com/static/svg/Vertical_Logo_White.svg"
+          alt="NAGAD88 Logo"
+          className="h-14 w-auto"
+        />
 
-                {/* Twitter */}
-                <a
-                  href="https://twitter.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="
-      w-10 h-10 rounded-full
-      flex items-center justify-center
-      bg-white/5 text-white
-      hover:bg-sky-500
-      hover:-translate-y-1
-      hover:shadow-lg
-      transition-all duration-300
-    "
-                >
-                  <FaTwitter size={18} />
-                </a>
+        <p className="text-blue-200/70 text-base leading-relaxed">
+          বাংলাদেশের ১ নম্বর অনলাইন গেমিং এবং স্পোর্টস বেটিং প্ল্যাটফর্ম।
+          আমরা প্রদান করি ১০০% নিরাপদ এবং নির্ভরযোগ্য সেবা।
+        </p>
 
-                {/* Instagram */}
-                <a
-                  href="https://www.instagram.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="
-      w-10 h-10 rounded-full
-      flex items-center justify-center
-      bg-white/5 text-white
-      hover:bg-gradient-to-tr hover:from-pink-500 hover:to-yellow-400
-      hover:-translate-y-1
-      hover:shadow-lg
-      transition-all duration-300
-    "
-                >
-                  <FaInstagram size={18} />
-                </a>
-
-                {/* YouTube */}
-                <a
-                  href="https://www.youtube.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="
-      w-10 h-10 rounded-full
-      flex items-center justify-center
-      bg-white/5 text-white
-      hover:bg-red-600
-      hover:-translate-y-1
-      hover:shadow-lg
-      transition-all duration-300
-    "
-                >
-                  <FaYoutube size={18} />
-                </a>
-              </div>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h4 className="text-lg font-bold text-[rgb(20,55,238)] mb-8 uppercase tracking-widest border-l-4 border-yellow-400 pl-4">
-                লিংকসমূহ
-              </h4>
-              <ul className="space-y-4 text-blue-200/60">
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-yellow-400 transition-colors"
-                  >
-                    প্রাইভেসি পলিসি
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-yellow-400 transition-colors"
-                  >
-                    টার্মস অ্যান্ড কন্ডিশন
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-yellow-400 transition-colors"
-                  >
-                    এফএকিউ (FAQ)
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-yellow-400 transition-colors"
-                  >
-                    ডায়নামিক অফার
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Contact */}
-            <div>
-              <h4 className="text-lg font-bold text-[rgb(20,55,238)] mb-8 uppercase tracking-widest border-l-4 border-yellow-400 pl-4">
-                যোগাযোগ
-              </h4>
-              <ul className="space-y-6">
-                <li className="flex items-start gap-4 text-blue-200/60 group">
-                  <div className="w-10 h-10 bg-blue-600/20 rounded-lg flex items-center justify-center text-yellow-400 group-hover:bg-yellow-400 group-hover:text-blue-950 transition-all shrink-0">
-                    <Phone size={20} />
-                  </div>
-                  <div>
-                    <div className="text-xs text-white/40 uppercase mb-1">
-                      ফোন & হোয়াটসঅ্যাপ
-                    </div>
-                    <div className="font-bold text-white">01936056185</div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Bottom Bar */}
-          <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-6 text-blue-200/50 text-sm">
-            <p className="opacity-70">© ২০২৬ Nagad88 | সর্বস্বত্ব সংরক্ষিত।</p>
-            <div className="flex flex-wrap justify-center gap-6 opacity-60">
-              <span className="flex items-center gap-2 border border-white/10 px-3 py-1 rounded">
-                18+ RESPONSIBLE GAMING
-              </span>
-              <span className="flex items-center gap-2 border border-white/10 px-3 py-1 rounded">
-                SSL SECURED
-              </span>
-              <span className="flex items-center gap-2 border border-white/10 px-3 py-1 rounded">
-                CURAÇAO GAMING
-              </span>
-            </div>
-          </div>
+        {/* Social Icons */}
+        <div className="flex gap-3 mt-2">
+          {[ 
+            { icon: <FaFacebookF size={14} />, color: "hover:bg-blue-600", link: "https://facebook.com" },
+            { icon: <FaTwitter size={15} />, color: "hover:bg-sky-500", link: "https://twitter.com" },
+            { icon: <FaInstagram size={15} />, color: "hover:bg-gradient-to-tr hover:from-pink-500 hover:to-yellow-400", link: "https://instagram.com" },
+            { icon: <FaYoutube size={15} />, color: "hover:bg-red-600", link: "https://youtube.com" },
+          ].map((item, i) => (
+            <a
+              key={i}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`
+                w-9 h-9 rounded-full
+                flex items-center justify-center
+                bg-white/5 text-white
+                ${item.color}
+                hover:-translate-y-0.5
+                transition-all duration-300
+              `}
+            >
+              {item.icon}
+            </a>
+          ))}
         </div>
-      </footer>
+      </div>
+
+      {/* Quick Links */}
+      <div>
+        <h4 className="text-sm font-bold text-[rgb(20,55,238)] mb-5 uppercase tracking-widest border-l-4 border-yellow-400 pl-3">
+          লিংকসমূহ
+        </h4>
+        <ul className="space-y-3 text-blue-200/70 text-sm">
+          {[
+            "প্রাইভেসি পলিসি",
+            "টার্মস অ্যান্ড কন্ডিশন",
+            "এফএকিউ (FAQ)",
+            "ডায়নামিক অফার",
+          ].map((item, i) => (
+            <li key={i}>
+              <a href="#" className="hover:text-yellow-400 transition">
+                {item}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Contact / Support */}
+      <div>
+        <h4 className="text-sm font-bold text-[rgb(20,55,238)] mb-5 uppercase tracking-widest border-l-4 border-yellow-400 pl-3">
+          সাপোর্ট
+        </h4>
+
+        <div className="space-y-3 text-blue-200/70 text-sm">
+          <p>📞 ২৪/৭ কাস্টমার কেয়ার</p>
+          <p>💬 লাইভ চ্যাট সাপোর্ট</p>
+          <p>📧 support@nagad88.com</p>
+        </div>
+      </div>
+    </div>
+
+    {/* Bottom Bar */}
+    <div className="border-t border-white/5 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-blue-200/50 text-xs">
+      <p>© ২০২৬ Nagad88 | সর্বস্বত্ব সংরক্ষিত।</p>
+
+      <div className="flex flex-wrap justify-center gap-3">
+        {["18+ RESPONSIBLE GAMING", "SSL SECURED", "CURAÇAO GAMING"].map(
+          (item, i) => (
+            <span
+              key={i}
+              className="border border-white/10 px-3 py-1 rounded"
+            >
+              {item}
+            </span>
+          )
+        )}
+      </div>
+    </div>
+  </div>
+</footer>
+
 
       {/* AI Assistant Bubble */}
       <ChatAssistant />
