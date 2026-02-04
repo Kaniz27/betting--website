@@ -185,11 +185,11 @@ const App: React.FC = () => {
                   window.open("https://www.nagad88a.com/?af=AG028124")
                 }
               >
-                Go To My Website <ExternalLink size={16} />
+                Play Now <ExternalLink size={16} />
               </SpringButton>
 
               {/* WhatsApp */}
-              <SpringButton
+              {/* <SpringButton
                 variant="whatsapp"
                 className="
       w-full sm:w-auto
@@ -212,7 +212,7 @@ const App: React.FC = () => {
               >
                 <WhatsApp size={16} />
                 হোয়াটসঅ্যাপ সাপোর্ট
-              </SpringButton>
+              </SpringButton> */}
             </div>
           </motion.div>
         </AnimatePresence>
