@@ -120,130 +120,108 @@ const App: React.FC = () => {
 
       {/* 2. HERO SECTION */}
       <header
-        id="home"
-        className="relative h-screen w-full text-white overflow-hidden"
-      >
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0, scale: 1 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 1 }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
-            className="absolute inset-0 flex items-center justify-center"
-          >
-            {/* Background Image */}
-            <img
-              src={SLIDES[currentSlide].image}
-              alt={`Slide ${currentSlide + 1}`}
-              className="
-    w-full 
-    h-48 sm:h-64 md:h-80 lg:h-[600px] 
-    object-cover 
-    sm:object-contain
-    rounded-lg
+  id="home"
+  className="relative h-screen w-full text-white overflow-hidden"
+>
+  <AnimatePresence mode="wait">
+    <motion.div
+      key={currentSlide}
+      initial={{ opacity: 0, scale: 1 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 1 }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      className="absolute inset-0 flex items-center justify-center"
+    >
+      {/* Background Image */}
+      <img
+  src={SLIDES[currentSlide].image}
+  alt={`Slide ${currentSlide + 1}`}
+  className="
+    w-full
+    max-h-screen
+    object-contain
+    sm:max-h-[500px]
+    md:max-h-[600px]
+    lg:max-h-[700px]
   "
-            />
+/>
 
-            {/* Gradient Overlay – Top + Bottom */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background:
-                  "linear-gradient(to bottom, rgb(255,149,26) 0%, transparent 30%, transparent 70%, rgb(255,149,26) 100%)",
-              }}
-            />
 
-            {/* Buttons – side by side */}
-            <div
-              className="
-    absolute
-    bottom-20 sm:bottom-24
-    left-1/2 -translate-x-1/2
-    flex
-    flex-col sm:flex-row
-    items-center
-    gap-3 sm:gap-6
-    px-4
-    w-full sm:w-auto
-  "
-            >
-              {/* Go To Website */}
-              <SpringButton
-                variant="attention"
-                className="
-      w-full sm:w-auto
-      flex items-center justify-center gap-2
-      text-sm sm:text-lg
-      px-5 py-2
-      bg-[rgb(255,149,26)]
-      hover:bg-[rgb(255,149,26)/90]
-      rounded-full
-      transition-all
-    "
-                onClick={() =>
-                  window.open("https://www.nagad88a.com/?af=AG028124")
-                }
-              >
-                Play Now <ExternalLink size={16} />
-              </SpringButton>
+      {/* Gradient Overlay – Top + Bottom */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgb(255,149,26) 0%, transparent 30%, transparent 70%, rgb(255,149,26) 100%)",
+        }}
+      />
 
-              {/* WhatsApp */}
-              {/* <SpringButton
-                variant="whatsapp"
-                className="
-      w-full sm:w-auto
-      flex items-center justify-center gap-2
-      text-sm sm:text-lg
-      px-5 py-2
-      bg-gradient-to-b from-[#2a4cff] to-[#1230c1]
-      hover:from-[#3b5bff] hover:to-[#1230c1]
-      text-white
-      rounded-full
-      shadow-md hover:shadow-xl
-      transition-all duration-300
-    "
-                // onClick={() =>
-                //   window.open(
-                //     "https://.me/8801936056185?text=Hello%20I%20need%20support",
-                //     "_blank",
-                //   )
-                // }
-              >
-                <WhatsApp size={16} />
-                হোয়াটসঅ্যাপ সাপোর্ট
-              </SpringButton> */}
-            </div>
-          </motion.div>
-        </AnimatePresence>
+      {/* Buttons – side by side */}
+      <div className="
+        absolute
+        bottom-20 sm:bottom-24
+        left-1/2 -translate-x-1/2
+        flex flex-col sm:flex-row
+        items-center
+        gap-3 sm:gap-6
+        px-4
+        w-full sm:w-auto
+      ">
+        {/* Go To Website */}
+        <button
+          type="button"
+          className="
+            w-full sm:w-auto
+            flex items-center justify-center gap-2
+            text-sm sm:text-lg
+            px-5 py-2
+            bg-[rgb(255,149,26)]
+            rounded-full
+            cursor-pointer
+            transition-none
+            transform-none
+            hover:bg-[rgb(255,149,26)]
+            active:bg-[rgb(255,149,26)]
+            focus:outline-none
+            focus:ring-0
+          "
+          onClick={() =>
+            window.open('https://www.nagad88a.com/?af=AG028124', '_blank')
+          }
+        >
+          Play Now <ExternalLink size={16} className="shrink-0" />
+        </button>
+      </div>
+    </motion.div>
+  </AnimatePresence>
 
-        {/* Slider Navigation Dots */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-3 z-10">
-          {SLIDES.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrentSlide(i)}
-              className={`h-2 rounded-full transition-all duration-500 ${
-                currentSlide === i
-                  ? "w-12 bg-[rgb(255,149,26)]"
-                  : "w-2 bg-white/30 hover:bg-white/50"
-              }`}
-            />
-          ))}
-        </div>
+  {/* Slider Navigation Dots */}
+  <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+    {SLIDES.map((_, i) => (
+      <button
+        key={i}
+        onClick={() => setCurrentSlide(i)}
+        className={`h-2 rounded-full transition-all duration-500 ${
+          currentSlide === i
+            ? "w-12 bg-[rgb(255,149,26)]"
+            : "w-2 bg-white/30 hover:bg-white/50"
+        }`}
+      />
+    ))}
+  </div>
 
-        {/* Bottom Scrolling Text */}
-        <div className="absolute bottom-0 w-full bg-black py-3 overflow-hidden">
-          <motion.div
-            className="whitespace-nowrap text-white font-medium text-center text-lg"
-            animate={{ x: ["100%", "-100%"] }}
-            transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
-          >
-            Play Safe, Play Nagad88😍: 💵 টাকা উত্তোলনের গ্যারান্টি ⚡️ মুহূর্তেই
-            টাকা উত্তোলনের সুযোগ
-          </motion.div>
-        </div>
-      </header>
+  {/* Bottom Scrolling Text */}
+  <div className="absolute bottom-0 w-full bg-black py-3 overflow-hidden">
+    <motion.div
+      className="whitespace-nowrap text-white font-medium text-center text-lg"
+      animate={{ x: ["100%", "-100%"] }}
+      transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
+    >
+      Play Safe, Play Nagad88😍: 💵 টাকা উত্তোলনের গ্যারান্টি ⚡️ মুহূর্তেই টাকা উত্তোলনের সুযোগ
+    </motion.div>
+  </div>
+</header>
+
       {/*  */}
       <section className="py-12 px-4 bg-[#0a192f]">
         {/* Top Text */}
