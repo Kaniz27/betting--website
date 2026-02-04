@@ -182,7 +182,7 @@ const App: React.FC = () => {
       transition-all
     "
                 onClick={() =>
-                  window.open("https://www.nagad88f.com/", "_blank")
+                  window.open("https://www.nagad88a.com/?af=AG028124")
                 }
               >
                 Go To My Website <ExternalLink size={16} />
