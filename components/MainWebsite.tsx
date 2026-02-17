@@ -20,7 +20,7 @@ import SpringButton from "./SpringButton";
 import ChatAssistant from "./ChatAssistant";
 import { SLIDES, FEATURES, GAMES, STEPS } from "../constants";
 
-const MainWebsite: React.FC = () => {
+const  MainWebsite: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
