@@ -1,13 +1,21 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useState } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Login from "./components/login/Login";
+
 import MainWebsite from "./components/MainWebsite";
-import AdminPanel from "./components/AdminPanel";
 
 const App: React.FC = () => {
+  const [user, setUser] = useState<string | null>(null);
+
+  if (!user) {
+    return <Login onLogin={(u) => setUser(u)} />;
+  }
+
   return (
     <Routes>
       <Route path="/" element={<MainWebsite />} />
-      <Route path="/admin" element={<AdminPanel />} />
+    
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 };
